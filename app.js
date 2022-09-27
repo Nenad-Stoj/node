@@ -10,7 +10,12 @@ app.use(upload())
 app.listen(port);
 app.set("view engine", "ejs")
 
+app.get("/healthCheck", (req,res,next)=>{
 
+
+  res.status(200).send('Ok')
+    next();
+})
 
 app.get("/", (req,res,next)=>{
 res.render("index.ejs");
