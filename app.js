@@ -3,11 +3,11 @@ const express = require('express');
 const fs = require('fs');
 const upload = require("express-fileupload")
 const app = express();
-
+const port = process.env.port || 3000;
 app.use(upload())
 
 
-app.listen(3000);
+app.listen(port);
 app.set("view engine", "ejs")
 
 
