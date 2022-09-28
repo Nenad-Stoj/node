@@ -18,6 +18,11 @@ app.get("/healthCheck", (req, res, next) => {
 })
 
 app.get("/", (req, res, next) => {
+
+  app.getConnections(function(err, count){
+    if(err) throw err;
+    console.log(count);
+    });
   res.render("index.ejs");
   next();
 
