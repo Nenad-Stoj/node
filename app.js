@@ -81,7 +81,7 @@ app.post("/download", (req, res, next) => {
   const fileName = "output.txt";
   const directoryPath = "./";
 
-  console.log(directoryPath)
+  //console.log(directoryPath)
 
   res.download(directoryPath + fileName, fileName, (err) => {
     if (err) {
